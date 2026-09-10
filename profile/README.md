@@ -22,21 +22,24 @@ We leverage **GitHub Copilot** to enhance developer productivity while maintaini
 
 <img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/9adbd74b-f8d9-4078-92f9-7ab8c3164c52" />
 
-## Navigation
-1.Create GitHub Account 
-    profile/docs/How to Create a GitHub Account (003).docx
+# 🚀 Getting Started with GitHub
 
-2.Enable license to Github account
-    https://uniperprod.service-now.com/unipersp?id=sc_cat_item_uni&sys_id=096d5d5e87571d18fc79c9d30cbb350c
+Follow the steps below to set up GitHub access and start contributing to the project.
 
-3. Reach **SCF DevOps team** to get access to Endur Organization and repository access
+| Step | Activity | Reference |
+|------|----------|-----------|
+| 1️⃣ | **Create a GitHub Account** | 📄 [GitHub Account Creation Guide](profile/docs/How%20to%20Create%20a%20GitHub%20Account%20(003).docx) |
+* | 🔗 [Submit License Request](https://uniperprod.service-now.com/unipersp?id=sc_cat_item_uni&sys_id=096d5d5e87571d18fc79c9d30cbb350c) |
+| 3️⃣ | **Obtain Access** | 🤝 Contact the **SCF DevOps Team** to gain access to the Endur GitHub Organization and repositories. |
+| 4️⃣ | **Configure Eclipse Integration** | ⚙️ Set up Eclipse with GitHub for source code management. |
+| 5️⃣ | **Commit Changes** | 💾 Commit your code changes to GitHub. |
+| 6️⃣ | **Create a Pull Request** | 🔄 Submit a Pull Request for code review and approval. |
 
-4. Eclipse Integration with Github
+---
 
-5. Commit changes to Github
+### 📚 Useful Links
 
-6. Pull Request
-
+- 🌐 [Uniper Service Portal](https://uniperpersp
 ## Copilot in Eclipse and Github
 
 ## Support
