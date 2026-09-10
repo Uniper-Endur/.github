@@ -51,7 +51,7 @@ Follow the steps below to set up GitHub access and start contributing to the pro
 
 🔄 Submit a Pull Request for code review and approval.
 
-<img width="537" height="238" alt="image" src="https://github.com/user-attachments/assets/1baa70ac-2523-456f-af8a-debaa59d23f9" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/46e3231b-e5fe-4cd2-b797-5f9a690243fb" />
 
 
 ### ✅ Required 2 Owner Approvals
