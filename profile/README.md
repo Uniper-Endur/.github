@@ -42,7 +42,7 @@ Follow the steps below to set up GitHub access and start contributing to the pro
 
 ### 3️⃣ Obtain Access
 
-🤝 Contact the **SCF DevOps Team** to gain access to the Endur GitHub Organization and required repositories.
+🤝 Contact the **[SCF DevOps Team](mailto:uit-scf-devsecops@uniper.energy)** to gain access to the Endur GitHub Organization and required repositories.
 
 ---
 
