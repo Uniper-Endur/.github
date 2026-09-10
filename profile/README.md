@@ -24,10 +24,10 @@ We leverage **GitHub Copilot** to enhance developer productivity while maintaini
 
 ## Navigation
 1.Create GitHub Account 
-profile/docs/How to Create a GitHub Account (003).docx
+    profile/docs/How to Create a GitHub Account (003).docx
 
-2.Enable license to Githu account
-https://uniperprod.service-now.com/unipersp?id=sc_cat_item_uni&sys_id=096d5d5e87571d18fc79c9d30cbb350c
+2.Enable license to Github account
+    https://uniperprod.service-now.com/unipersp?id=sc_cat_item_uni&sys_id=096d5d5e87571d18fc79c9d30cbb350c
 
 3. Reach **SCF DevOps team** to get access to Endur Organization and repository access
 
