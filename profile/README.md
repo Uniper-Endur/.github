@@ -26,16 +26,41 @@ We leverage **GitHub Copilot** to enhance developer productivity while maintaini
 
 Follow the steps below to set up GitHub access and start contributing to the project.
 
-| Step | Activity | Reference |
-|------|----------|-----------|
-| 1️⃣ | **Create a GitHub Account** | 📄 [GitHub Account Creation Guide](profile/docs/How%20to%20Create%20a%20GitHub%20Account%20(003).docx) |
-* | 🔗 [Submit License Request](https://uniperprod.service-now.com/unipersp?id=sc_cat_item_uni&sys_id=096d5d5e87571d18fc79c9d30cbb350c) |
-| 3️⃣ | **Obtain Access** | 🤝 Contact the **SCF DevOps Team** to gain access to the Endur GitHub Organization and repositories. |
-| 4️⃣ | **Configure Eclipse Integration** | ⚙️ Set up Eclipse with GitHub for source code management. |
-| 5️⃣ | **Commit Changes** | 💾 Commit your code changes to GitHub. |
-| 6️⃣ | **Create a Pull Request** | 🔄 Submit a Pull Request for code review and approval. |
+---
+
+## 1️⃣ Create a GitHub Account
+
+📄 [GitHub Account Creation Guide](profile/docs/How%20to%20Create%20a%20GitHub%20⃣ Enable GitHub License
+
+🔗 [Submit License Request](https://uniperprod.service-now.com/unipersp?id=sc_cat_item_uni&sys_id=096d5d5e87571d18fc79c9d30cbb350c)
 
 ---
+
+## 3️⃣ Obtain Repository Access
+
+🤝 Contact the **SCF DevOps Team** to gain access to the **Endur GitHub Organization** and required repositories.
+
+---
+
+## 4️⃣ Configure Eclipse Integration
+
+⚙️ Complete the Eclipse and GitHub integration setup.
+
+📄 [Eclipse Integration Guide](docs/Eclipse-GitHub-Integration.docx)
+
+� Commit your code changes to the GitHub repository.
+
+---
+
+## 6️⃣ Create a Pull Request
+
+🔄 Submit a Pull Request for code review and approval.
+
+---
+
+## 🔗 Helpful Links
+
+🌐 [Uniper Service Portal](https://uniperprod.service---
 
 ### 📚 Useful Links
 
