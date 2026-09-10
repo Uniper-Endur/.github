@@ -11,17 +11,6 @@ The **Endur DevOps Project** enhances code quality, security, and repository man
 - **Code Quality Standards** - Ensuring maintainable, high-performance codebases
 - **AI-Assisted Development** - GitHub Copilot integration for enhanced productivity
 
-## Key Initiatives
-
-<img width="1671" height="941" alt="image" src="https://github.com/user-attachments/assets/3fafe84d-c048-4d96-9e4c-598b9162a983" />
-
-
-We leverage **GitHub Copilot** to enhance developer productivity while maintaining security and code quality standards. Copilot is available across the organization for eligible team members.
-
-### 🤖 Copilot Capabilities
-
-<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/9adbd74b-f8d9-4078-92f9-7ab8c3164c52" />
-
 # 🚀 Getting Started with GitHub
 
 Follow the steps below to set up GitHub access and start contributing to the project.
