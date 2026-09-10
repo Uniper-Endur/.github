@@ -30,7 +30,7 @@ Follow the steps below to set up GitHub access and start contributing to the pro
 
 ### 1️⃣ Create a GitHub Account
 
-📄 [GitHub Account Creation Guide](profile/docs/How to Create a GitHub Account (003).docx)
+📄 [GitHub Account Creation Guide](./profile/docs/How to Create a GitHub Account (003).docx)
 
 ---
 
