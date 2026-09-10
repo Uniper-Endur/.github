@@ -23,8 +23,21 @@ We leverage **GitHub Copilot** to enhance developer productivity while maintaini
 <img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/9adbd74b-f8d9-4078-92f9-7ab8c3164c52" />
 
 ## Navigation
-How to create GitHub Account
+1.Create GitHub Account 
 profile/docs/How to Create a GitHub Account (003).docx
+
+2.Enable license to Githu account
+https://uniperprod.service-now.com/unipersp?id=sc_cat_item_uni&sys_id=096d5d5e87571d18fc79c9d30cbb350c
+
+3. Reach **SCF DevOps team** to get access to Endur Organization and repository access
+
+4. Eclipse Integration with Github
+
+5. Commit changes to Github
+
+6. Pull Request
+
+## Copilot in Eclipse and Github
 
 ## Support
 
