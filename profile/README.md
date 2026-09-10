@@ -54,7 +54,7 @@ Follow the steps below to set up GitHub access and start contributing to the pro
 
 ### 5️⃣ Commit Changes
 
-💾 Commit your code changes to GitHub.
+💾 [Commit your code changes to GitHub](https://raw.githubusercontent.com/Uniper-Endur/.github/main/profile/docs/Commit.mp4)
 
 ---
 
