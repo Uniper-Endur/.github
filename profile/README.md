@@ -85,6 +85,47 @@ Always keep Chrome as default browser before signing into Copilot in eclipse
 
 select Copy Code and Open option 
 
+🤖 GitHub Copilot Features
+⚡ Code Completion
+
+Real-time code suggestions and autocomplete while coding.
+
+💬 Copilot Chat
+
+Ask questions, explain code, generate code, and troubleshoot issues using natural language.
+
+🛠️ Code Generation
+
+Generate functions, classes, scripts, and boilerplate code from prompts.
+
+✅ Pull Request Reviews
+
+AI-assisted PR reviews that identify potential bugs, risks, and improvement opportunities. Human approvals are still required.
+
+📝 Pull Request Summaries
+
+Automatically creates summaries of code changes for reviewers.
+
+📚 Documentation Generation
+
+Generate README content, comments, docstrings, and technical documentation.
+
+🔍 Code Explanation
+
+Explain complex code logic, functions, and workflows.
+
+🐞 Bug Detection & Refactoring
+
+Suggest fixes, improve code quality, and recommend refactoring opportunities.
+
+🧠 Context-Aware Suggestions
+
+Uses repository and file context to provide relevant recommendations.
+
+🔒 Security Assistance
+
+Helps identify risky patterns and supports secure coding practices.
+
 ## Support
 
 For questions or issues:
