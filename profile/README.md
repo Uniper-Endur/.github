@@ -23,6 +23,8 @@ We leverage **GitHub Copilot** to enhance developer productivity while maintaini
 <img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/9adbd74b-f8d9-4078-92f9-7ab8c3164c52" />
 
 ## Navigation
+How to create GitHub Account
+profile/docs/How to Create a GitHub Account (003).docx
 
 ## Support
 
