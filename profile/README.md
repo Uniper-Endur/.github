@@ -48,9 +48,7 @@ Follow the steps below to set up GitHub access and start contributing to the pro
 
 ### 4️⃣ Configure Eclipse Integration
 
-⚙️ Set up Eclipse with GitHub for source code management.
-profile/docs/Video Project 6.mp4
-
+⚙️ [Set up Eclipse with GitHub for source code management](profile/docs/Video Project 6.mp4)
 
 ---
 
