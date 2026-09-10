@@ -79,6 +79,11 @@ Branch protection rules prevent bypassing required reviews, approvals, and valid
 ---
 
 ## Copilot in Eclipse and Github
+Always keep Chrome as default browser before signing into Copilot in eclipse 
+
+<img width="868" height="373" alt="image" src="https://github.com/user-attachments/assets/629a9eab-1fa1-47f2-9db5-a4cd752360f2" />
+
+select Copy Code and Open option 
 
 ## Support
 
