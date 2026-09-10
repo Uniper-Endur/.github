@@ -37,7 +37,7 @@ Follow the steps below to set up GitHub access and start contributing to the pro
 
 ### 4️⃣ Configure Eclipse Integration
 
-⚙️ [Set up Eclipse with GitHub for source code management](https://raw.githubusercontent.com/Uniper-Endur/.github/blob/main/profile/docs/Eclipse_GitHub_User_Guide.docx)
+⚙️ [Set up Eclipse with GitHub for source code management](https://raw.githubusercontent.com/Uniper-Endur/.github/main/profile/docs/Eclipse_GitHub_User_Guide.docx)
 
 ---
 
