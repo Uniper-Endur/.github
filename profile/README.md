@@ -30,7 +30,7 @@ Follow the steps below to set up GitHub access and start contributing to the pro
 
 ### 1️⃣ Create a GitHub Account
 
-📄 [GitHub Account Creation Guide](https://github.com/Uniper-Endur/.github/blob/main/profile/docs/How%20to%20Create%20a%20GitHub%20Account%20(003).docx)
+📄 [GitHub Account Creation Guide](https://raw.githubusercontent.com/Uniper-Endur/.github/blob/main/profile/docs/How%20to%20Create%20a%20GitHub%20Account%20(003).docx)
 
 ---
 
