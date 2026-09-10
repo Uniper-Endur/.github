@@ -128,7 +128,7 @@ Helps identify risky patterns and supports secure coding practices.
 
 ## Support
 
-For questions or issues:
+For questions or issues: "SCF DevSecOps Team" <uit-scf-devsecops@uniper.energy>
 
 ---
 
