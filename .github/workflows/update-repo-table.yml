@@ -31,6 +31,7 @@ jobs:
           ./scripts/update-repo-table.ps1
 
       - name: Commit README changes
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
