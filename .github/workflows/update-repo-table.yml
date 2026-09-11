@@ -18,10 +18,18 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Login
+      - name: Test GH_TOKEN
+        shell: pwsh
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: echo "Token available"
+        run: |
+          if ([string]::IsNullOrWhiteSpace($env:GH_TOKEN)) {
+              throw "Token is EMPTY"
+          }
+      
+          Write-Host "Token is present. Length: $($env:GH_TOKEN.Length)"
+      
+          gh auth status --hostname github.com      
       - name: Update repository table
         shell: pwsh
         env:
