@@ -65,13 +65,23 @@ catch {
 
 Write-Host "Checking GitHub authentication..."
 
-gh auth status
+$viewerJson = gh api "/user"
 
 if ($LASTEXITCODE -ne 0) {
     Write-Error "GitHub authentication failed."
     exit 1
 }
 
+try {
+    $viewer = $viewerJson | ConvertFrom-Json
+}
+catch {
+    Write-Error "Unable to read authenticated GitHub user information."
+    Write-Error $_
+    exit 1
+}
+
+Write-Host "Authenticated as: $($viewer.login) [$($viewer.type)]"
 Write-Host "Authentication successful."
 Write-Host ""
 
@@ -117,7 +127,40 @@ if ($null -eq $repositories) {
 
 $repositories = @($repositories)
 
+$visibilityCounts = $repositories |
+    Group-Object -Property {
+        if ([string]::IsNullOrWhiteSpace($_.visibility)) {
+            "unknown"
+        }
+        else {
+            $_.visibility
+        }
+    } |
+    Sort-Object Name
+
+$visibilitySummary = if ($visibilityCounts) {
+    ($visibilityCounts | ForEach-Object { "$($_.Name)=$($_.Count)" }) -join ", "
+}
+else {
+    "none"
+}
+
+$internalRepoCount = @(
+    $repositories | Where-Object { $_.visibility -eq "internal" }
+).Count
+
+$privateRepoCount = @(
+    $repositories | Where-Object { $_.private -eq $true }
+).Count
+
 Write-Host "Repositories found: $($repositories.Count)"
+Write-Host "Visibility counts: $visibilitySummary"
+Write-Host "Private flag counts: private=$privateRepoCount, non-private=$($repositories.Count - $privateRepoCount)"
+
+if ($internalRepoCount -eq 0) {
+    Write-Warning "No internal repositories were returned by the API for the current token."
+}
+
 Write-Host ""
 
 # ------------------------------------------------------------

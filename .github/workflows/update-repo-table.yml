@@ -19,10 +19,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Validate GH_TOKEN wiring
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::GH_TOKEN secret is not available to this job. If it is stored as an environment secret, attach this workflow job to that environment."
+            exit 1
+          fi
+
       - name: Update repository table
         shell: pwsh
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_ORG: ${{ github.repository_owner }}
         run: |
           ./scripts/update-repo-table.ps1
