@@ -22,7 +22,7 @@ jobs:
       - name: Update repository table
         shell: pwsh
         env:
-          GH_TOKEN: ${{ secrets.GT_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           GITHUB_ORG: ${{ github.repository_owner }}
         run: |
           ./scripts/update-repo-table.ps1
