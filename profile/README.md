@@ -53,29 +53,29 @@ Follow the steps below to set up GitHub access and start contributing to the pro
 
 <img width="868" height="373" alt="image" src="https://github.com/user-attachments/assets/8a0c2eae-f33c-425a-b447-f6660226b7f6" />
 
-# Branch name Condition
+#### Branch name Condition
 
 bau|l3|nppd|project|ntp|GoOAutomation|scfdevops|v25Upgrade|NPPD)/(feature|fix|hotfix|release|incident)/featurename
 
-# ✅ Required 2 Owner Approvals
+#### ✅ Required 2 Owner Approvals
 Pull Requests must receive approvals from at least **two designated Code Owners** before they can be merged.
 
-# ✅ All Required Checks Must Pass
+#### ✅ All Required Checks Must Pass
 All mandatory status checks, including CI builds, unit tests, code quality validations, and security scans, must complete successfully.
 
-# ✅ GitHub Copilot Auto Review
+#### ✅ GitHub Copilot Auto Review
 GitHub Copilot automatically reviews code changes and provides recommendations to improve code quality and maintainability.
 
-# ✅ Code Owner Approval Required
+#### ✅ Code Owner Approval Required
 Only designated Code Owners can provide the required approvals for protected files and branches.
 
-# ✅ Merge Blocked Until Requirements Are Met
+#### ✅ Merge Blocked Until Requirements Are Met
 The merge option remains disabled until all required checks pass and the minimum number of reviewer approvals has been obtained.
 
-# ✅ Re-Approval Required for New Changes
+#### ✅ Re-Approval Required for New Changes
 If new commits are pushed after approvals have been granted, existing approvals are dismissed and reviewers must approve the Pull Request again.
 
-# ✅ Protected Branch Enforcement
+#### ✅ Protected Branch Enforcement
 Branch protection rules prevent bypassing required reviews, approvals, and validation checks before merging.
 
 ---
