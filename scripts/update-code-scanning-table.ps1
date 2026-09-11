@@ -105,6 +105,11 @@ foreach ($repo in $repos) {
     catch {
         Write-Host "  Unable to read Code Scanning alerts."
     }
+    finally {
+        if ($LASTEXITCODE -ne 0) {
+            $global:LASTEXITCODE = 0
+        }
+    }
 
     $total = $critical + $high + $medium + $low
 
