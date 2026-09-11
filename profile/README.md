@@ -14,9 +14,6 @@ Welcome to **Uniper-Endur**! We are committed to excellence in development pract
 
 <!-- REPO_TABLE_END -->
 
-## Code Scanning Security
-
-## Code Scanning Security
 
 ## Code Scanning Security
 
