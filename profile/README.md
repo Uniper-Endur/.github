@@ -87,44 +87,42 @@ Always keep Chrome as default browser before signing into Copilot in eclipse
 
 select Copy Code and Open option 
 
-🤖 <u>GitHub Copilot Features<\u> \
+🤖 <u>GitHub Copilot Features</u> <br>
 ⚡ Code Completion
 
-Real-time code suggestions and autocomplete while coding.\
+Real-time code suggestions and autocomplete while coding.<br>
 
-💬 <u>Copilot Chat<\u>
+💬 <u>Copilot Chat</u>
 
-Ask questions, explain code, generate code, and troubleshoot issues using natural language.\
+Ask questions, explain code, generate code, and troubleshoot issues using natural language <br>
 
-🛠️ <u>Code Generation<\u>
+🛠️ <u>Code Generation</u>
 
-Generate functions, classes, scripts, and boilerplate code from prompts.\
+Generate functions, classes, scripts, and boilerplate code from prompt <br>
 
-✅ <u>Pull Request Reviews<\u>
+✅ <u>Pull Request Reviews</u>
 
-AI-assisted PR reviews that identify potential bugs, risks, and improvement opportunities. Human approvals are still required.\
+AI-assisted PR reviews that identify potential bugs, risks, and improvement opportunities. Human approvals are still required.<br>
 
-📝 <u>Pull Request Summaries<\u>
+📝 <u>Pull Request Summaries</u>
 
-Automatically creates summaries of code changes for reviewers.\
+Automatically creates summaries of code changes for reviewers.<br>
 
-📚 <u>Documentation Generation<\u>
+📚 <u>Documentation Generation</u>
 
-Generate README content, comments, docstrings, and technical documentation.\
+Generate README content, comments, docstrings, and technical documentation.<br>
+🔍<u> Code Explanation</u>
 
-🔍<u> Code Explanation<\u>
+Explain complex code logic, functions, and workflows.<br>
 
-Explain complex code logic, functions, and workflows.\
+🐞 <u>Bug Detection & Refactoring</u>
 
-🐞 <u>Bug Detection & Refactoring<\u>
+Suggest fixes, improve code quality, and recommend refactoring opportunities.<br>
+🧠 <u>Context-Aware Suggestions</u>
 
-Suggest fixes, improve code quality, and recommend refactoring opportunities.\
+Uses repository and file context to provide relevant recommendations.<br>
 
-🧠 <u>Context-Aware Suggestions<\u>
-
-Uses repository and file context to provide relevant recommendations.\
-
-🔒 <u>Security Assistance<\u>
+🔒 <u>Security Assistance</u>
 
 Helps identify risky patterns and supports secure coding practices.
 
