@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Update repository table
         shell: pwsh
@@ -38,5 +40,6 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "chore: update repository table"
-            git push
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
