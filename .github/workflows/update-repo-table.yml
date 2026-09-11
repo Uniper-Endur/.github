@@ -16,7 +16,6 @@ permissions:
 
 jobs:
   update-repo-table:
-    if: github.ref_name == 'main'
     runs-on: ubuntu-latest
 
     steps:
