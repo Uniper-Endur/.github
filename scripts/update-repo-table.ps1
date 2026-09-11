@@ -46,8 +46,12 @@ function Get-GitHubPagedItems {
             continue
         }
 
-        if ($page -is [System.Array]) {
-            $items += $page
+        if ($page -is [System.Collections.IEnumerable] -and -not ($page -is [string])) {
+            foreach ($item in $page) {
+                if ($null -ne $item) {
+                    $items += ,$item
+                }
+            }
         }
         else {
             $items += ,$page
