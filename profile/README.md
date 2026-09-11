@@ -5,8 +5,6 @@ Welcome to **Uniper-Endur**! We are committed to excellence in development pract
 
 ## Repository Overview
 
-## Repository Overview
-
 <!-- REPO_TABLE_START -->
 
 <!-- REPO_TABLE_END -->
