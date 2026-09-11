@@ -156,10 +156,7 @@ $privateRepoCount = @(
 Write-Host "Repositories found: $($repositories.Count)"
 Write-Host "Visibility counts: $visibilitySummary"
 Write-Host "Private flag counts: private=$privateRepoCount, non-private=$($repositories.Count - $privateRepoCount)"
-
-if ($internalRepoCount -eq 0) {
-    Write-Warning "No internal repositories were returned by the API for the current token."
-}
+Write-Host "Internal repositories returned: $internalRepoCount"
 
 Write-Host ""
 
