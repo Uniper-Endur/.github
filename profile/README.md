@@ -51,7 +51,7 @@ Follow the steps below to set up GitHub access and start contributing to the pro
 
 🔄 Submit a Pull Request for code review and approval.
 
-<img width="868" height="373" alt="image" src="https://github.com/user-attachments/assets/8a0c2eae-f33c-425a-b447-f6660226b7f6" />
+<img width="500" height="373" alt="image" src="https://github.com/user-attachments/assets/8a0c2eae-f33c-425a-b447-f6660226b7f6" />
 
 #### Branch name Condition
 
@@ -83,7 +83,7 @@ Branch protection rules prevent bypassing required reviews, approvals, and valid
 ## Copilot in Eclipse and Github
 Always keep Chrome as default browser before signing into Copilot in eclipse 
 
-<img width="427" height="137" alt="image" src="https://github.com/user-attachments/assets/54a12a77-7c2a-48fd-89e0-b27b9b5a7836" />
+<img width="500" height="137" alt="image" src="https://github.com/user-attachments/assets/54a12a77-7c2a-48fd-89e0-b27b9b5a7836" />
 
 select Copy Code and Open option 
 
