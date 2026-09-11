@@ -68,7 +68,8 @@ if ($LASTEXITCODE -ne 0) {
     throw "Unable to retrieve repositories."
 }
 
-$repos = $reposJson | ConvertFrom-Json
+$repos = $reposJson | ConvertFrom-Json | Where-Object { $_.name -ne ".github" }
+
 
 Write-Host "Repositories found: $(@($repos).Count)"
 
