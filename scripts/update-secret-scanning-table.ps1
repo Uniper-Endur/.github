@@ -121,6 +121,12 @@ foreach ($repo in $repos) {
 
         Write-Host "Unable to retrieve Default alerts."
     }
+    finally {
+
+        if ($LASTEXITCODE -ne 0) {
+            $global:LASTEXITCODE = 0
+        }
+    }
 
     # ========================================================
     # GENERIC SECRET SCANNING
@@ -158,6 +164,12 @@ foreach ($repo in $repos) {
     catch {
 
         Write-Host "Unable to retrieve Generic alerts."
+    }
+    finally {
+
+        if ($LASTEXITCODE -ne 0) {
+            $global:LASTEXITCODE = 0
+        }
     }
 
     # ========================================================
