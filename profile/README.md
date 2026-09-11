@@ -27,6 +27,11 @@ Welcome to **Uniper-Endur**! We are committed to excellence in development pract
 
 <!-- CODE-SCANNING-END -->
 
+## Secret Scanning
+
+<!-- SECRET-SCANNING-START -->
+<!-- SECRET-SCANNING-END -->
+
 ## 🚀 Getting Started with GitHub
 
 Follow the steps below to set up GitHub access and start contributing to the project.
