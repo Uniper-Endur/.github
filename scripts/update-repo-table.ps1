@@ -100,7 +100,7 @@ try {
         throw "GitHub API request failed."
     }
 
-    $repositories = $repoJson | ConvertFrom-Json
+    $repositories = $repoJson | ConvertFrom-Json | Where-Object { $_.name -ne ".github" }
 
 }
 catch {
