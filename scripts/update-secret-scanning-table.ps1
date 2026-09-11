@@ -79,6 +79,11 @@ foreach ($repo in $repos) {
 
         Write-Host "  Unable to read Secret Scanning alerts."
     }
+    finally {
+        if ($LASTEXITCODE -ne 0) {
+            $global:LASTEXITCODE = 0
+        }
+    }
 
     Write-Host "  Open Secrets: $secretCount"
 
