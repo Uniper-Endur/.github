@@ -2,6 +2,12 @@
 
 Welcome to **Uniper-Endur**! We are committed to excellence in development practices, code quality, security, and repository management.
 
+Code Repositories mixes 3 main kinds of assets:
+
+*Java-based Endur custom code*
+*Database objects / SQL deployment scripts*
+*Endur configuration exports (XML/CMM/workflow/task/query artifacts)*
+
 
 ## Repositories Overview
 
@@ -12,6 +18,8 @@ Welcome to **Uniper-Endur**! We are committed to excellence in development pract
 | endur-fenix-migration | Java | 179 | 327 | 70 |
 
 <!-- REPO_TABLE_END -->
+
+https://github.com/orgs/Uniper-Endur/repositories <br>
 
 ## Code Scanning Security
 
@@ -38,6 +46,9 @@ https://github.com/orgs/Uniper-Endur/security/alerts/code-scanning <br>
 | **Organization Total** | **3** | **14** | **17** |
 
 <!-- SECRET-SCANNING-END -->
+
+https://github.com/orgs/Uniper-Endur/security/alerts/secret-scanning <br>
+https://github.com/orgs/Uniper-Endur/security/alerts/secret-scanning?query=is%3Aopen+results%3Ageneric <br>
 
 ## 🚀 Getting Started with GitHub
 
