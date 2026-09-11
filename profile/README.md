@@ -4,9 +4,9 @@ Welcome to **Uniper-Endur**! We are committed to excellence in development pract
 
 Code Repositories mixes 3 main kinds of assets:
 
-*Java-based Endur custom code*
-*Database objects / SQL deployment scripts*
-*Endur configuration exports (XML/CMM/workflow/task/query artifacts)*
+*Java-based Endur custom code*<br>
+*Database objects / SQL deployment scripts*<br>
+*Endur configuration exports (XML/CMM/workflow/task/query artifacts)*<br>
 
 
 ## Repositories Overview
