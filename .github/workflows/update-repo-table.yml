@@ -10,7 +10,6 @@ on:
   schedule:
     # Scheduled workflows run from the repository default branch; this automation assumes that branch is main.
     - cron: '0 6 * * *'
-  workflow_dispatch:
 
 permissions:
   contents: write
@@ -23,8 +22,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          ref: main
 
       - name: Verify required tools
         run: |
