@@ -42,8 +42,15 @@ function Get-GitHubPagedItems {
     $items = @()
 
     foreach ($page in $pages) {
-        if ($null -ne $page) {
+        if ($null -eq $page) {
+            continue
+        }
+
+        if ($page -is [System.Array]) {
             $items += $page
+        }
+        else {
+            $items += ,$page
         }
     }
 
