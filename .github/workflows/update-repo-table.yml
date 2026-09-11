@@ -25,8 +25,8 @@ jobs:
       - name: Update repository table
         shell: pwsh
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GITHUB_ORG: ${{ github.repository_owner }}
+          GH_TOKEN: "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"
+          GITHUB_ORG: "Uniper-Endur"
         run: |
           ./scripts/update-repo-table.ps1
 
