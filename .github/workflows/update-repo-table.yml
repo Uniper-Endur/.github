@@ -18,7 +18,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+      - name: Login
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: echo "Token available"
       - name: Update repository table
         shell: pwsh
         env:
