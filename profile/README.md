@@ -2,15 +2,14 @@
 
 Welcome to **Uniper-Endur**! We are committed to excellence in development practices, code quality, security, and repository management.
 
-## Our Mission
 
-The **Endur DevOps Project** enhances code quality, security, and repository management for the Endur FENIX & GO application through:
-- **Static Application Security Testing (SAST)** - Automated code scanning for vulnerabilities
-- **Security Best Practices** - Industry-standard security patterns and guidelines
-- **Repository Management** - Standardized workflows and governance
-- **Code Quality Standards** - Ensuring maintainable, high-performance codebases
-- **AI-Assisted Development** - GitHub Copilot integration for enhanced productivity
---
+## Repository Overview
+
+<!-- REPO_TABLE_START -->
+
+<!-- REPO_TABLE_END -->--
+
+
 ## 🚀 Getting Started with GitHub
 
 Follow the steps below to set up GitHub access and start contributing to the project.
