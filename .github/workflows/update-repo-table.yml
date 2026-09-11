@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: refs/heads/main
 
       - name: Ensure manual runs target main
         if: github.event_name == 'workflow_dispatch'
