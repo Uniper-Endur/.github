@@ -38,7 +38,7 @@ function Get-GitHubPagedItems {
         throw "GitHub API request failed for endpoint: $Endpoint"
     }
 
-    $pages = @($json | ConvertFrom-Json)
+    $pages = $json | ConvertFrom-Json
     $items = @()
 
     foreach ($page in $pages) {
