@@ -2,41 +2,49 @@ name: Update Repository Table
 
 on:
   push:
+    branches:
+      - main
     paths:
       - 'scripts/update-repo-table.ps1'
       - '.github/workflows/update-repo-table.yml'
+  schedule:
+    - cron: '0 6 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
-  pull-requests: read
 
 jobs:
   update-repo-table:
+    if: github.ref_name == 'main'
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Verify required tools
+        run: |
+          gh --version
+          pwsh --version
+
       - name: Update repository table
         shell: pwsh
         env:
-          GH_TOKEN: ${{ secrets.GT_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           GITHUB_ORG: ${{ github.repository_owner }}
-        run: |
-          ./scripts/update-repo-table.ps1
+        run: ./scripts/update-repo-table.ps1
 
       - name: Commit README changes
+        shell: bash
         run: |
+          if git diff --quiet -- profile/README.md; then
+            echo "profile/README.md is already up to date."
+            exit 0
+          fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
           git add profile/README.md
-
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "chore: update repository table"
-            git push
-          fi
+          git commit -m "chore: update repository table"
+          git push origin HEAD:main

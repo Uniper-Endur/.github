@@ -20,11 +20,41 @@ $ErrorActionPreference = "Stop"
 # ------------------------------------------------------------
 
 $Org = $env:GITHUB_ORG
-
-$ReadmePath = "profile/README.md"
+$RepoRoot = Resolve-Path -Path (Join-Path $PSScriptRoot "..")
+$ReadmePath = Join-Path $RepoRoot "profile/README.md"
 
 $StartMarker = "<!-- REPO_TABLE_START -->"
 $EndMarker   = "<!-- REPO_TABLE_END -->"
+
+function Get-GitHubPagedItems {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Endpoint
+    )
+
+    $json = gh api --paginate --slurp $Endpoint
+
+    if ($LASTEXITCODE -ne 0) {
+        throw "GitHub API request failed for endpoint: $Endpoint"
+    }
+
+    $pages = @($json | ConvertFrom-Json)
+    $items = @()
+
+    foreach ($page in $pages) {
+        if ($null -eq $page) {
+            continue
+        }
+
+        foreach ($item in @($page)) {
+            if ($null -ne $item) {
+                $items += $item
+            }
+        }
+    }
+
+    return @($items)
+}
 
 # ------------------------------------------------------------
 # Validate environment
@@ -51,13 +81,12 @@ Write-Host ""
 # Check GitHub CLI
 # ------------------------------------------------------------
 
-try {
-    gh --version
-}
-catch {
+if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
     Write-Error "GitHub CLI (gh) is not installed."
     exit 1
 }
+
+gh --version | Select-Object -First 1
 
 # ------------------------------------------------------------
 # Check authentication
@@ -91,31 +120,18 @@ if (-not (Test-Path $ReadmePath)) {
 Write-Host "Getting repositories from organization..."
 
 try {
-
-    $repoJson = gh api `
-        --paginate `
-        "/orgs/$Org/repos?per_page=100&type=all"
-
-    if ($LASTEXITCODE -ne 0) {
-        throw "GitHub API request failed."
-    }
-
-    $repositories = $repoJson | ConvertFrom-Json
-
+    $repositories = Get-GitHubPagedItems -Endpoint "/orgs/$Org/repos?per_page=100&type=all"
 }
 catch {
-
     Write-Error "Unable to retrieve repositories."
     Write-Error $_
     exit 1
 }
 
-if ($null -eq $repositories) {
+if ($null -eq $repositories -or @($repositories).Count -eq 0) {
     Write-Error "No repositories returned from GitHub."
     exit 1
 }
-
-$repositories = @($repositories)
 
 Write-Host "Repositories found: $($repositories.Count)"
 Write-Host ""
@@ -127,118 +143,46 @@ Write-Host ""
 $tableRows = @()
 
 foreach ($repo in $repositories) {
-
     $repoName = $repo.name
 
     Write-Host "----------------------------------------------"
     Write-Host "Processing: $repoName"
 
-    # --------------------------------------------------------
-    # Language
-    # --------------------------------------------------------
-
-    if ([string]::IsNullOrWhiteSpace($repo.language)) {
-        $language = "-"
-    }
-    else {
-        $language = $repo.language
-    }
-
+    $language = if ([string]::IsNullOrWhiteSpace($repo.language)) { "-" } else { $repo.language }
     Write-Host "Language: $language"
 
-    # --------------------------------------------------------
-    # Branches
-    # --------------------------------------------------------
-
     try {
-
-        $branchJson = gh api `
-            --paginate `
-            "/repos/$Org/$repoName/branches?per_page=100"
-
-        if ($LASTEXITCODE -eq 0 -and $branchJson) {
-
-            $branches = $branchJson | ConvertFrom-Json
-            $branchCount = @($branches).Count
-
-        }
-        else {
-
-            $branchCount = 0
-        }
-
+        $branches = Get-GitHubPagedItems -Endpoint "/repos/$Org/$repoName/branches?per_page=100"
+        $branchCount = @($branches).Count
     }
     catch {
-
         Write-Warning "Unable to retrieve branches for $repoName"
         $branchCount = 0
     }
 
     Write-Host "Branches: $branchCount"
 
-    # --------------------------------------------------------
-    # Tags
-    # --------------------------------------------------------
-
     try {
-
-        $tagJson = gh api `
-            --paginate `
-            "/repos/$Org/$repoName/tags?per_page=100"
-
-        if ($LASTEXITCODE -eq 0 -and $tagJson) {
-
-            $tags = $tagJson | ConvertFrom-Json
-            $tagCount = @($tags).Count
-
-        }
-        else {
-
-            $tagCount = 0
-        }
-
+        $tags = Get-GitHubPagedItems -Endpoint "/repos/$Org/$repoName/tags?per_page=100"
+        $tagCount = @($tags).Count
     }
     catch {
-
         Write-Warning "Unable to retrieve tags for $repoName"
         $tagCount = 0
     }
 
     Write-Host "Tags: $tagCount"
 
-    # --------------------------------------------------------
-    # Open Pull Requests
-    # --------------------------------------------------------
-
     try {
-
-        $prJson = gh api `
-            --paginate `
-            "/repos/$Org/$repoName/pulls?state=open&per_page=100"
-
-        if ($LASTEXITCODE -eq 0 -and $prJson) {
-
-            $pullRequests = $prJson | ConvertFrom-Json
-            $openPrCount = @($pullRequests).Count
-
-        }
-        else {
-
-            $openPrCount = 0
-        }
-
+        $pullRequests = Get-GitHubPagedItems -Endpoint "/repos/$Org/$repoName/pulls?state=open&per_page=100"
+        $openPrCount = @($pullRequests).Count
     }
     catch {
-
         Write-Warning "Unable to retrieve PRs for $repoName"
         $openPrCount = 0
     }
 
     Write-Host "Open PRs: $openPrCount"
-
-    # --------------------------------------------------------
-    # Add Markdown row
-    # --------------------------------------------------------
 
     $tableRows += "| $repoName | $language | $branchCount | $tagCount | $openPrCount |"
 }
@@ -270,7 +214,8 @@ $EndMarker
 Write-Host ""
 Write-Host "Reading $ReadmePath..."
 
-$readme = Get-Content -Path $ReadmePath -Raw
+$originalReadme = Get-Content -Path $ReadmePath -Raw
+$updatedReadme = $originalReadme
 
 # ------------------------------------------------------------
 # Update existing table
@@ -278,16 +223,14 @@ $readme = Get-Content -Path $ReadmePath -Raw
 
 $escapedStart = [regex]::Escape($StartMarker)
 $escapedEnd   = [regex]::Escape($EndMarker)
-
 $pattern = "(?s)$escapedStart.*?$escapedEnd"
 
-if ($readme -match $pattern) {
-
+if ($updatedReadme -match $pattern) {
     Write-Host "Existing repository table found."
     Write-Host "Replacing table..."
 
-    $readme = [regex]::Replace(
-        $readme,
+    $updatedReadme = [regex]::Replace(
+        $updatedReadme,
         $pattern,
         [System.Text.RegularExpressions.MatchEvaluator]{
             param($match)
@@ -295,19 +238,13 @@ if ($readme -match $pattern) {
         }
     )
 }
-
-# ------------------------------------------------------------
-# Add table if it does not exist
-# ------------------------------------------------------------
-
 else {
-
     Write-Host "Repository table markers not found."
     Write-Host "Adding repository table..."
 
-    $readme = $readme.TrimEnd()
+    $updatedReadme = $updatedReadme.TrimEnd()
 
-    $readme += @"
+    $updatedReadme += @"
 
 ## Repository Overview
 
@@ -317,13 +254,22 @@ $table
 }
 
 # ------------------------------------------------------------
-# Write README
+# Write README only when changed
 # ------------------------------------------------------------
 
-Set-Content `
-    -Path $ReadmePath `
-    -Value $readme `
-    -Encoding UTF8
+if ($updatedReadme -eq $originalReadme) {
+    Write-Host ""
+    Write-Host "README already up to date. No changes written."
+}
+else {
+    Set-Content `
+        -Path $ReadmePath `
+        -Value $updatedReadme `
+        -Encoding UTF8
+
+    Write-Host ""
+    Write-Host "README updated on disk."
+}
 
 # ------------------------------------------------------------
 # Summary
@@ -331,7 +277,7 @@ Set-Content `
 
 Write-Host ""
 Write-Host "=============================================="
-Write-Host " Repository Table Updated Successfully"
+Write-Host " Repository Table Update Complete"
 Write-Host "=============================================="
 Write-Host "Organization : $Org"
 Write-Host "Repositories : $($repositories.Count)"
