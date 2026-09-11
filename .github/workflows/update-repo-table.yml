@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: read
 
 jobs:
   update-repo-table:
@@ -17,13 +18,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Run repository table update
+      - name: Update repository table
         shell: pwsh
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
           GITHUB_ORG: ${{ github.repository_owner }}
         run: |
           ./scripts/update-repo-table.ps1
@@ -33,10 +32,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add README.md
+          git add profile/README.md
 
           if git diff --cached --quiet; then
-            echo "No README changes detected."
+            echo "No changes to commit."
           else
             git commit -m "chore: update repository table"
             git push
