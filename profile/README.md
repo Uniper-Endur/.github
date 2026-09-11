@@ -3,7 +3,7 @@
 Welcome to **Uniper-Endur**! We are committed to excellence in development practices, code quality, security, and repository management.
 
 
-## Repository Overview
+## Repositories Overview
 
 <!-- REPO_TABLE_START -->
 
@@ -13,6 +13,12 @@ Welcome to **Uniper-Endur**! We are committed to excellence in development pract
 | endur-fenix-migration | Java | 179 | 327 | 70 |
 
 <!-- REPO_TABLE_END -->
+
+## Code Scanning Security
+
+<!-- CODE-SCANNING-START -->
+
+<!-- CODE-SCANNING-END -->
 
 ## 🚀 Getting Started with GitHub
 
