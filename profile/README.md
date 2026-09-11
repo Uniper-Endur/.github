@@ -10,8 +10,8 @@ The **Endur DevOps Project** enhances code quality, security, and repository man
 - **Repository Management** - Standardized workflows and governance
 - **Code Quality Standards** - Ensuring maintainable, high-performance codebases
 - **AI-Assisted Development** - GitHub Copilot integration for enhanced productivity
-
-# 🚀 Getting Started with GitHub
+--
+## 🚀 Getting Started with GitHub
 
 Follow the steps below to set up GitHub access and start contributing to the project.
 
@@ -87,46 +87,48 @@ Always keep Chrome as default browser before signing into Copilot in eclipse
 
 select Copy Code and Open option 
 
-🤖 GitHub Copilot Features
+🤖 <u>GitHub Copilot Features<\u> \
 ⚡ Code Completion
 
-Real-time code suggestions and autocomplete while coding.
+Real-time code suggestions and autocomplete while coding.\
 
-💬 Copilot Chat
+💬 <u>Copilot Chat<\u>
 
-Ask questions, explain code, generate code, and troubleshoot issues using natural language.
+Ask questions, explain code, generate code, and troubleshoot issues using natural language.\
 
-🛠️ Code Generation
+🛠️ <u>Code Generation<\u>
 
-Generate functions, classes, scripts, and boilerplate code from prompts.
+Generate functions, classes, scripts, and boilerplate code from prompts.\
 
-✅ Pull Request Reviews
+✅ <u>Pull Request Reviews<\u>
 
-AI-assisted PR reviews that identify potential bugs, risks, and improvement opportunities. Human approvals are still required.
+AI-assisted PR reviews that identify potential bugs, risks, and improvement opportunities. Human approvals are still required.\
 
-📝 Pull Request Summaries
+📝 <u>Pull Request Summaries<\u>
 
-Automatically creates summaries of code changes for reviewers.
+Automatically creates summaries of code changes for reviewers.\
 
-📚 Documentation Generation
+📚 <u>Documentation Generation<\u>
 
-Generate README content, comments, docstrings, and technical documentation.
+Generate README content, comments, docstrings, and technical documentation.\
 
-🔍 Code Explanation
+🔍<u> Code Explanation<\u>
 
-Explain complex code logic, functions, and workflows.
+Explain complex code logic, functions, and workflows.\
 
-🐞 Bug Detection & Refactoring
+🐞 <u>Bug Detection & Refactoring<\u>
 
-Suggest fixes, improve code quality, and recommend refactoring opportunities.
+Suggest fixes, improve code quality, and recommend refactoring opportunities.\
 
-🧠 Context-Aware Suggestions
+🧠 <u>Context-Aware Suggestions<\u>
 
-Uses repository and file context to provide relevant recommendations.
+Uses repository and file context to provide relevant recommendations.\
 
-🔒 Security Assistance
+🔒 <u>Security Assistance<\u>
 
 Helps identify risky patterns and supports secure coding practices.
+
+--
 
 ## Support
 
