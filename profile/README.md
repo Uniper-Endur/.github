@@ -27,10 +27,6 @@ Welcome to **Uniper-Endur**! We are committed to excellence in development pract
 
 <!-- CODE-SCANNING-END -->
 
-
-
-## Secret Scanning
-
 ## Secret Scanning
 
 <!-- SECRET-SCANNING-START -->
