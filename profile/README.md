@@ -80,6 +80,21 @@ Branch protection rules prevent bypassing required reviews, approvals, and valid
 
 ---
 
+## Quick Reference
+
+|     | Activity                           | GitHub Navigation                                         |
+| --- | ---------------------------------- | --------------------------------------------------------- |
+| 🌿  | **Create Branch**                  | `Code → Branch ▼ → View all branches → New branch`        |
+| 🏷️ | **Create Tag**                     | `Releases → Draft a new release → Choose a tag`           |
+| 🔄  | **Create Pull Request**            | `Pull requests → New pull request`                        |
+| 👀  | **Approve Pull Request**           | `Pull Request → Files changed → Review changes → Approve` |
+| ✅   | **Merge Pull Request**             | `Pull Request → Merge pull request`                       |
+| ❌   | **Cancel Pull Request**            | `Pull Request → Close pull request`                       |
+| 🗑️ | **Delete Branch**                  | `Code → Branch ▼ → View all branches → Delete`            |
+| 🤖  | **Fix Vulnerability with Copilot** | `Security → Code scanning → Alert → Generate fix`         |
+
+---
+
 ## Copilot in Eclipse and Github
 Always keep Chrome as default browser before signing into Copilot in eclipse 
 
