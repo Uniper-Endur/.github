@@ -9,7 +9,7 @@ Welcome to **Uniper-Endur**! We are committed to excellence in development pract
 
 | Repository | Language | Branches | Tags | Open PRs |
 |------------|----------|----------|------|----------|
-| .github | PowerShell | 2 | 0 | 1 |
+| .github | PowerShell | 3 | 0 | 2 |
 
 <!-- REPO_TABLE_END -->
 
@@ -117,3 +117,4 @@ For questions or issues: "SCF DevSecOps Team" <uit-scf-devsecops@uniper.energy>
 
 **Uniper-Endur** | Building secure, maintainable, and high-performance solutions with AI-assisted development  
 *Last updated: 2026-09-10*
+
