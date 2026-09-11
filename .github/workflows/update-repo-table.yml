@@ -8,6 +8,7 @@ on:
       - 'scripts/update-repo-table.ps1'
       - '.github/workflows/update-repo-table.yml'
   schedule:
+    # Scheduled workflows run from the repository default branch; this automation assumes that branch is main.
     - cron: '0 6 * * *'
   workflow_dispatch:
 

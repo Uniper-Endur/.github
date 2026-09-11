@@ -26,7 +26,7 @@ $ReadmePath = Join-Path $RepoRoot "profile/README.md"
 $StartMarker = "<!-- REPO_TABLE_START -->"
 $EndMarker   = "<!-- REPO_TABLE_END -->"
 
-function Get-GitHubPagedItems {
+function Get-GitHubPagedCollectionItems {
     param(
         [Parameter(Mandatory = $true)]
         [string]$Endpoint
@@ -125,7 +125,7 @@ if (-not (Test-Path $ReadmePath)) {
 Write-Host "Getting repositories from organization..."
 
 try {
-    $repositories = Get-GitHubPagedItems -Endpoint "/orgs/$Org/repos?per_page=100&type=all"
+    $repositories = Get-GitHubPagedCollectionItems -Endpoint "/orgs/$Org/repos?per_page=100&type=all"
 }
 catch {
     Write-Error "Unable to retrieve repositories."
@@ -157,7 +157,7 @@ foreach ($repo in $repositories) {
     Write-Host "Language: $language"
 
     try {
-        $branches = Get-GitHubPagedItems -Endpoint "/repos/$Org/$repoName/branches?per_page=100"
+        $branches = Get-GitHubPagedCollectionItems -Endpoint "/repos/$Org/$repoName/branches?per_page=100"
         $branchCount = @($branches).Count
     }
     catch {
@@ -168,7 +168,7 @@ foreach ($repo in $repositories) {
     Write-Host "Branches: $branchCount"
 
     try {
-        $tags = Get-GitHubPagedItems -Endpoint "/repos/$Org/$repoName/tags?per_page=100"
+        $tags = Get-GitHubPagedCollectionItems -Endpoint "/repos/$Org/$repoName/tags?per_page=100"
         $tagCount = @($tags).Count
     }
     catch {
@@ -179,7 +179,7 @@ foreach ($repo in $repositories) {
     Write-Host "Tags: $tagCount"
 
     try {
-        $pullRequests = Get-GitHubPagedItems -Endpoint "/repos/$Org/$repoName/pulls?state=open&per_page=100"
+        $pullRequests = Get-GitHubPagedCollectionItems -Endpoint "/repos/$Org/$repoName/pulls?state=open&per_page=100"
         $openPrCount = @($pullRequests).Count
     }
     catch {
