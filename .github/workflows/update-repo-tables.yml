@@ -1,0 +1,73 @@
+name: Update Repository Table
+
+on:
+  # Run when a branch or tag is created/updated
+  push:
+    branches:
+      - '**'
+    tags:
+      - '**'
+
+  # Run when a Pull Request is created, updated, or reopened
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+  # Run every 60 minutes
+  schedule:
+    - cron: '0 * * * *'
+
+  # Allow manual execution
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  update-repo-table:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Test GH_TOKEN
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          if ([string]::IsNullOrWhiteSpace($env:GH_TOKEN)) {
+              throw "Token is EMPTY"
+          }
+
+          Write-Host "Token is present. Length: $($env:GH_TOKEN.Length)"
+
+          gh auth status --hostname github.com
+
+      - name: Update repository table
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_ORG: "Uniper-Endur"
+        run: |
+          ./scripts/update-repo-table.ps1
+
+      - name: Commit README changes
+        shell: pwsh
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add profile/README.md
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update repository table"
+            git push
+          fi
