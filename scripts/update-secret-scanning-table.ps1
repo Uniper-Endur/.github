@@ -218,7 +218,7 @@ if ($null -eq $totalAll) {
 
 $table = @()
 
-$table += "## Secret Scanning"
+
 $table += ""
 $table += "<!-- SECRET-SCANNING-START -->"
 $table += ""
