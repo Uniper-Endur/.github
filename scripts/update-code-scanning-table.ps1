@@ -152,7 +152,6 @@ $totalAll = $totalCritical + $totalHigh + $totalMedium + $totalLow
 
 $table = @()
 
-$table += "## Code Scanning Security"
 $table += ""
 $table += "<!-- CODE-SCANNING-START -->"
 $table += ""
