@@ -24,12 +24,6 @@ https://github.com/orgs/Uniper-Endur/repositories <br>
 
 ## Code Scanning Security
 
-## Code Scanning Security
-
-## Code Scanning Security
-
-## Code Scanning Security
-
 <!-- CODE-SCANNING-START -->
 
 | Repository | Critical | High | Medium | Low | Total |
