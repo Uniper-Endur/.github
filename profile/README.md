@@ -24,10 +24,13 @@ https://github.com/orgs/Uniper-Endur/repositories <br>
 
 ## Code Scanning Security
 
+## Code Scanning Security
+
 <!-- CODE-SCANNING-START -->
 
 | Repository | Critical | High | Medium | Low | Total |
 |---|---:|---:|---:|---:|---:|
+| .github | 0 | 0 | 0 | 0 | 0 |
 | endur-fenix-migration | 2 | 57 | 6 | 0 | 65 |
 | **Organization Total** | **2** | **57** | **6** | **0** | **65** |
 
@@ -152,6 +155,7 @@ For questions or issues: "SCF DevSecOps Team" <uit-scf-devsecops@uniper.energy>
 
 **Uniper-Endur** | Building secure, maintainable, and high-performance solutions with AI-assisted development  
 *Last updated: 2026-09-10*
+
 
 
 
