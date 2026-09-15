@@ -34,7 +34,7 @@ if ($LASTEXITCODE -ne 0) {
     throw "Unable to retrieve repositories."
 }
 
-$repos = $reposJson | ConvertFrom-Json
+$repos = $reposJson | ConvertFrom-Json | Where-Object { $_.name -ne ".github" }
 
 Write-Host "Repositories found: $(@($repos).Count)"
 
@@ -68,7 +68,8 @@ foreach ($repo in $repos) {
 
         if ($LASTEXITCODE -eq 0 -and $alertsJson) {
 
-            $alerts = $alertsJson | ConvertFrom-Json
+            $alerts = $alertsJson | ConvertFrom-Json | Where-Object { $_.name -ne ".github" }
+
 
             foreach ($alert in @($alerts)) {
 
