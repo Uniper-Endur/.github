@@ -124,9 +124,9 @@ Branch protection rules prevent bypassing required reviews, approvals, and valid
 
 |     | Activity                           | GitHub Navigation                                         |
 | --- | ---------------------------------- | --------------------------------------------------------- |
-| 🌿  | **Create Branch**                  | `Code → Branch ▼ → View all branches → New branch`        |
-| 🏷️ | **Create Tag**                     | `Releases → Draft a new release → Choose a tag`           |
-| 🔄  | **Create Pull Request**            | `Pull requests → New pull request`                        |
+| 🌿  | **Create Branch**                  | https://github.com/Uniper-Endur/<repo-name>/branches        |
+| 🏷️ | **Create Tag**                     | https://github.com/Uniper-Endur/<repo-name>/new           |
+| 🔄  | **Create Pull Request**            | https://github.com/Uniper-Endur/<repo-name>/compare   |
 | 👀  | **Approve Pull Request**           | `Pull Request → Files changed → Review changes → Approve` |
 | ✅   | **Merge Pull Request**             | `Pull Request → Merge pull request`                       |
 | ❌   | **Cancel Pull Request**            | `Pull Request → Close pull request`                       |
