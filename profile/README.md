@@ -22,7 +22,7 @@ Code Repositories mixes 3 main kinds of assets:
 https://github.com/orgs/Uniper-Endur/repositories <br>
 
 
-## Code Scanning Security
+##  🛡️ Code Scanning Security
 
 
 
@@ -39,7 +39,7 @@ https://github.com/orgs/Uniper-Endur/repositories <br>
 
 https://github.com/orgs/Uniper-Endur/security/alerts/code-scanning <br>
 
-## Secret Scanning
+##  🔐 Secret Scanning
 
 
 
