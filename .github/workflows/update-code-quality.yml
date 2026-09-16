@@ -96,4 +96,3 @@ jobs:
           git commit -m "chore: update code quality table"
 
           git push
-```
