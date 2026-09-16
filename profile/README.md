@@ -56,6 +56,11 @@ https://github.com/orgs/Uniper-Endur/security/alerts/code-scanning <br>
 https://github.com/orgs/Uniper-Endur/security/alerts/secret-scanning <br>
 https://github.com/orgs/Uniper-Endur/security/alerts/secret-scanning?query=is%3Aopen+results%3Ageneric <br>
 
+## 🧹 Code Quality 
+
+<!-- CODE-QUALITY-START -->
+<!-- CODE-QUALITY-END -->
+
 ## 🚀 Getting Started with GitHub
 
 Follow the steps below to set up GitHub access and start contributing to the project.
