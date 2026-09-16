@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      GITHUB_ORG: ur
+      GITHUB_ORG: Uniper-Endur
 
     steps:
 
