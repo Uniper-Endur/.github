@@ -155,9 +155,8 @@ $table = @()
 $table += ""
 $table += "<!-- CODE-SCANNING-START -->"
 $table += ""
-$table += "| Repository | Critical | High | Medium | Low | Total |"
+$table += "| Repository | 🔴 Critical | 🟠 High | 🟡 Medium | 🟢 Low | 🔵 Total |"
 $table += "|---|---:|---:|---:|---:|---:|"
-
 foreach ($item in $results | Sort-Object Repository) {
 
     $table += "| $($item.Repository) | $($item.Critical) | $($item.High) | $($item.Medium) | $($item.Low) | $($item.Total) |"
