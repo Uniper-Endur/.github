@@ -9,7 +9,7 @@ Code Repositories mixes 3 main kinds of assets:
 *Endur configuration exports (XML/CMM/workflow/task/query artifacts)*<br>
 
 
-## Repositories Overview
+## 📋 Repositories Overview
 
 <!-- REPO_TABLE_START -->
 
