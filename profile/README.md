@@ -1,4 +1,4 @@
-# Uniper-Endur Organization
+# Endur Organization
 
 Welcome to **Uniper-Endur**! We are committed to excellence in development practices, code quality, security, and repository management.
 
