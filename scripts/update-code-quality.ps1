@@ -274,4 +274,3 @@ Write-Host "Errors                     : $totalErrors"
 Write-Host "Warnings                   : $totalWarnings"
 Write-Host "Total findings             : $totalAll"
 Write-Host "============================================"
-```
