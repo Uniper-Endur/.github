@@ -1,4 +1,3 @@
-```powershell
 $ErrorActionPreference = "Stop"
 
 $Org = $env:GITHUB_ORG
