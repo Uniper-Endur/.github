@@ -33,7 +33,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-          token: ${{ secrets.GH_TOKEN }}
 
       # ------------------------------------------------------
       # Install GitHub CLI
