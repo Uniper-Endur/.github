@@ -186,10 +186,7 @@ $notConfiguredCount = @(
 
 $table = @()
 
-$table += ""
-$table += "<!-- CODE-QUALITY-START -->"
-$table += ""
-$table += "## 🧹 Code Quality"
+
 $table += ""
 $table += "| Repository | ⚙️ Status | 🔴 Errors | 🟠 Warnings | 🔵 Total |"
 $table += "|---|---|---:|---:|---:|"
