@@ -61,9 +61,6 @@ https://github.com/orgs/Uniper-Endur/security/alerts/secret-scanning?query=is%3A
 ## 🧹 Code Quality 
 
 
-<!-- CODE-QUALITY-START -->
-
-## 🧹 Code Quality
 
 | Repository | ⚙️ Status | 🔴 Errors | 🟠 Warnings | 🔵 Total |
 |---|---|---:|---:|---:|
