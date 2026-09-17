@@ -15,7 +15,7 @@ Code Repositories mixes 3 main kinds of assets:
 
 | Repository | Language | Branches | Tags | Open PRs |
 |------------|----------|----------|------|----------|
-| endur-fenix-migration | Java | 188 | 327 | 78 |
+| endur-fenix-migration | Java | 188 | 327 | 79 |
 
 <!-- REPO_TABLE_END -->
 
@@ -180,6 +180,7 @@ For questions or issues: "SCF DevSecOps Team" <uit-scf-devsecops@uniper.energy>
 | **Organization Total** | **Configured: 0** | **0** | **0** | **0** |
 
 <!-- CODE-QUALITY-END -->
+
 
 
 
