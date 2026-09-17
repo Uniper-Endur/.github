@@ -60,7 +60,16 @@ https://github.com/orgs/Uniper-Endur/security/alerts/secret-scanning?query=is%3A
 
 ## 🧹 Code Quality 
 
+
 <!-- CODE-QUALITY-START -->
+
+## 🧹 Code Quality
+
+| Repository | ⚙️ Status | 🔴 Errors | 🟠 Warnings | 🔵 Total |
+|---|---|---:|---:|---:|
+| endur-fenix-migration | Not Configured | 0 | 0 | 0 |
+| **Organization Total** | **Configured: 0** | **0** | **0** | **0** |
+
 <!-- CODE-QUALITY-END -->
 
 ## 🚀 Getting Started with GitHub
@@ -166,6 +175,7 @@ For questions or issues: "SCF DevSecOps Team" <uit-scf-devsecops@uniper.energy>
 
 **Uniper-Endur** | Building secure, maintainable, and high-performance solutions with AI-assisted development  
 *Last updated: 2026-09-10*
+
 
 
 
