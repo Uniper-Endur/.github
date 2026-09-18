@@ -47,6 +47,7 @@ https://github.com/orgs/Uniper-Endur/security/alerts/code-scanning <br>
 
 
 
+
 <!-- SECRET-SCANNING-START -->
 
 | Repository | Default | Generic | Total |
@@ -189,4 +190,5 @@ For questions or issues: "SCF DevSecOps Team" <uit-scf-devsecops@uniper.energy>
 | **Organization Total** | **Configured: 0** | **0** | **0** | **0** |
 
 <!-- CODE-QUALITY-END -->
+
 
