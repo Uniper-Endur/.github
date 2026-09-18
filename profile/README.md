@@ -29,6 +29,7 @@ https://github.com/orgs/Uniper-Endur/repositories <br>
 
 
 
+
 <!-- CODE-SCANNING-START -->
 
 | Repository | 🔴 Critical | 🟠 High | 🟡 Medium | 🟢 Low | 🔵 Total |
@@ -180,6 +181,7 @@ For questions or issues: "SCF DevSecOps Team" <uit-scf-devsecops@uniper.energy>
 | **Organization Total** | **Configured: 0** | **0** | **0** | **0** |
 
 <!-- CODE-QUALITY-END -->
+
 
 
 
