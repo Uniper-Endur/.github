@@ -193,29 +193,10 @@ For questions or issues: "SCF DevSecOps Team" <uit-scf-devsecops@uniper.energy>
 <!-- CODE-QUALITY-END -->
 
 
+| Repository | ⚙️ Status | 🔴 Errors | 🟠 Warnings | 🔵 Total |
+|---|---|---:|---:|---:|
+| endur-fenix-migration | Not Configured | 0 | 0 | 0 |
+| **Organization Total** | **Configured: 0** | **0** | **0** | **0** |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- CODE-QUALITY-END -->
 
